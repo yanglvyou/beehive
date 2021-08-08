@@ -1,13 +1,23 @@
-# feat：新功能（feature）
+## 提交规范
 
-# fix：修补 bug
+### feat：新功能（feature）
 
-# docs：文档（documentation）
+### fix：修补 bug
 
-# style： 格式（不影响代码运行的变动）
+### docs：文档（documentation）
 
-# refactor：重构（即不是新增功能，也不是修改 bug 的代码变动）
+### style： 格式（不影响代码运行的变动）
 
-# test：增加测试
+### refactor：重构（即不是新增功能，也不是修改 bug 的代码变动）
 
-# chore：构建过程或辅助工具的变动
+### test：增加测试
+
+### chore：构建过程或辅助工具的变动
+
+## react-native-iconfont-cli
+
+https://github.com/iconfont-cli/react-native-iconfont-cli
+
+### npx iconfont-init
+
+### npx iconfont-rn

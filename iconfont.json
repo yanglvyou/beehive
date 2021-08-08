@@ -1,0 +1,8 @@
+{
+  "symbol_url": "https://at.alicdn.com/t/font_1809801_cyo3ydak16l.js",
+  "use_typescript": true,
+  "save_dir": "./src/iconfont",
+  "trim_icon_prefix": "IconFont",
+  "default_icon_size": 20,
+  "local_svgs": ""
+}
