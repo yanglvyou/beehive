@@ -1,5 +1,6 @@
 import React from 'react';
 import { Platform, StyleSheet, StatusBar } from 'react-native';
+import SplashScreen from 'react-native-splash-screen';
 import { NavigationContainer } from '@react-navigation/native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import {
@@ -31,6 +32,9 @@ export type BottomTabsScreenProps = NativeStackScreenProps<
 const RootStack = createStackNavigator<RootStackParamList>();
 
 class Navigator extends React.Component {
+  componentDidMount() {
+    SplashScreen.hide();
+  }
   render() {
     return (
       <NavigationContainer>

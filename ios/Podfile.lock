@@ -270,10 +270,12 @@ PODS:
   - React-jsinspector (0.64.1)
   - react-native-flipper (0.108.0):
     - React-Core
-  - react-native-pager-view (5.4.4):
+  - react-native-pager-view (5.4.7):
     - React-Core
   - react-native-safe-area-context (3.3.2):
     - React-Core
+  - react-native-splash-screen (3.2.0):
+    - React
   - React-perflogger (0.64.1)
   - React-RCTActionSheet (0.64.1):
     - React-Core/RCTActionSheetHeaders (= 0.64.1)
@@ -342,7 +344,7 @@ PODS:
     - React-Core
   - RNGestureHandler (1.10.3):
     - React-Core
-  - RNReanimated (2.2.2):
+  - RNReanimated (2.2.3):
     - DoubleConversion
     - FBLazyVector
     - FBReactNativeSpec
@@ -371,7 +373,7 @@ PODS:
     - React-RCTVibration
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNScreens (3.7.2):
+  - RNScreens (3.8.0):
     - React-Core
     - React-RCTImage
   - RNSVG (12.1.1):
@@ -423,6 +425,7 @@ DEPENDENCIES:
   - react-native-flipper (from `../node_modules/react-native-flipper`)
   - react-native-pager-view (from `../node_modules/react-native-pager-view`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
+  - react-native-splash-screen (from `../node_modules/react-native-splash-screen`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
@@ -495,6 +498,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-pager-view"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
+  react-native-splash-screen:
+    :path: "../node_modules/react-native-splash-screen"
   React-perflogger:
     :path: "../node_modules/react-native/ReactCommon/reactperflogger"
   React-RCTActionSheet:
@@ -561,8 +566,9 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 124e8f99992490d0d13e0649d950d3e1aae06fe9
   React-jsinspector: 500a59626037be5b3b3d89c5151bc3baa9abf1a9
   react-native-flipper: 8f4efec0aa4a9e8fc752fdc9568577785746bce4
-  react-native-pager-view: 5ab4d0b4b44d89f77310cb3eb8129745f274ce55
+  react-native-pager-view: 741e7606ee2f6e399fc7da777f5519454a4b38c5
   react-native-safe-area-context: 584dc04881deb49474363f3be89e4ca0e854c057
+  react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
   React-perflogger: aad6d4b4a267936b3667260d1f649b6f6069a675
   React-RCTActionSheet: fc376be462c9c8d6ad82c0905442fd77f82a9d2a
   React-RCTAnimation: ba0a1c3a2738be224a08092fa7f1b444ab77d309
@@ -577,8 +583,8 @@ SPEC CHECKSUMS:
   ReactCommon: bedc99ed4dae329c4fcf128d0c31b9115e5365ca
   RNCMaskedView: c298b644a10c0c142055b3ae24d83879ecb13ccd
   RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
-  RNReanimated: 241c586663f44f19a53883c63375fdd041253960
-  RNScreens: 0591543e343c7444ea1756b6265d81a4295922c9
+  RNReanimated: 64c38d47ffcc29c97fc1d8cfde9e8a73d7be7cc8
+  RNScreens: 6e1ea5787989f92b0671049b808aef64fa1ef98c
   RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
   Yoga: a7de31c64fe738607e7a3803e3f591a4b1df7393
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
