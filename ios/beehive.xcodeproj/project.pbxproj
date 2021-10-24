@@ -15,6 +15,7 @@
 		54A63E18B874B98710FE358C /* libPods-beehive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 857269B5EFD0B7C5532A5227 /* libPods-beehive.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		D729B6E5271B138D0052E379 /* libswiftWebKit.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D729B6E4271B138D0052E379 /* libswiftWebKit.tbd */; };
+		D766D068272567D900E41196 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D766D067272567D800E41196 /* Config.xcconfig */; };
 		D767A671271C3A5700C8390B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D767A670271C3A5700C8390B /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		857269B5EFD0B7C5532A5227 /* libPods-beehive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-beehive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9218F918CC3B5FA53E22FF0E /* Pods-beehive-beehiveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beehive-beehiveTests.debug.xcconfig"; path = "Target Support Files/Pods-beehive-beehiveTests/Pods-beehive-beehiveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D729B6E4271B138D0052E379 /* libswiftWebKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftWebKit.tbd; path = usr/lib/swift/libswiftWebKit.tbd; sourceTree = SDKROOT; };
+		D766D067272567D800E41196 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		D767A670271C3A5700C8390B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		DE0F261D8191AD87C61B1601 /* Pods-beehive-beehiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beehive-beehiveTests.release.xcconfig"; path = "Target Support Files/Pods-beehive-beehiveTests/Pods-beehive-beehiveTests.release.xcconfig"; sourceTree = "<group>"; };
 		E4DDE2247108679EE7E22369 /* Pods-beehive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beehive.debug.xcconfig"; path = "Target Support Files/Pods-beehive/Pods-beehive.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				D766D067272567D800E41196 /* Config.xcconfig */,
 				D767A670271C3A5700C8390B /* Launch Screen.storyboard */,
 				13B07FAE1A68108700A75B9A /* beehive */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -191,6 +194,7 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				E0C9FA11F73BE814DA3588F9 /* [CP] Embed Pods Frameworks */,
 				73DBC383C60DE7A279B46581 /* [CP] Copy Pods Resources */,
+				D766D06B27256B2300E41196 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -249,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D766D068272567D900E41196 /* Config.xcconfig in Resources */,
 				D767A671271C3A5700C8390B /* Launch Screen.storyboard in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
@@ -366,6 +371,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		D766D06B27256B2300E41196 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${SRCROOT}/../node_modules/react-native-config/ios/ReactNativeConfig/BuildXCConfig.rb\" \"${SRCROOT}/..\" \"${SRCROOT}/tmp.xcconfig\"\n";
 		};
 		E0C9FA11F73BE814DA3588F9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -545,6 +567,7 @@
 		};
 		83CBBA201A601CBA00E9B192 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D766D067272567D800E41196 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -610,6 +633,7 @@
 		};
 		83CBBA211A601CBA00E9B192 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D766D067272567D800E41196 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;

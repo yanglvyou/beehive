@@ -268,6 +268,10 @@ PODS:
     - React-jsi (= 0.64.1)
     - React-perflogger (= 0.64.1)
   - React-jsinspector (0.64.1)
+  - react-native-config (1.4.4):
+    - react-native-config/App (= 1.4.4)
+  - react-native-config/App (1.4.4):
+    - React-Core
   - react-native-flipper (0.108.0):
     - React-Core
   - react-native-pager-view (5.4.7):
@@ -422,6 +426,7 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-config (from `../node_modules/react-native-config`)
   - react-native-flipper (from `../node_modules/react-native-flipper`)
   - react-native-pager-view (from `../node_modules/react-native-pager-view`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
@@ -492,6 +497,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-config:
+    :path: "../node_modules/react-native-config"
   react-native-flipper:
     :path: "../node_modules/react-native-flipper"
   react-native-pager-view:
@@ -565,6 +572,7 @@ SPEC CHECKSUMS:
   React-jsi: 5de8204706bd872b78ea646aee5d2561ca1214b6
   React-jsiexecutor: 124e8f99992490d0d13e0649d950d3e1aae06fe9
   React-jsinspector: 500a59626037be5b3b3d89c5151bc3baa9abf1a9
+  react-native-config: 72d948053a442779b3178fddd571e37f118ef606
   react-native-flipper: 8f4efec0aa4a9e8fc752fdc9568577785746bce4
   react-native-pager-view: 741e7606ee2f6e399fc7da777f5519454a4b38c5
   react-native-safe-area-context: 584dc04881deb49474363f3be89e4ca0e854c057
