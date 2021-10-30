@@ -11,8 +11,10 @@
     "clean-android-bundle": "rm -rf ./bundles/android/*",
     "android:build": "cd android && ./gradlew assembleRelease",
     "android:production": "ENVFILE=.env.production react-native run-android",
+    "android:keystore": "cd android/app && keytool -genkeypair -v -storetype PKCS12 -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 1000",
     "ios:production": "ENVFILE=.env.production react-native run-ios",
     "ios-pod-install": "cd ios && pod install && cd ..",
+    "app:upload": "export ENVFILE=.env.production && npx upload-pgy --apk=v7a --no-ios",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "prepare": "husky install"
@@ -57,6 +59,7 @@
     "metro-react-native-babel-preset": "^0.64.0",
     "react-native-flipper": "^0.108.0",
     "react-native-iconfont-cli": "^2.2.3",
+    "react-native-upload": "^2.2.1",
     "react-test-renderer": "17.0.1",
     "typescript": "^3.8.3"
   },
