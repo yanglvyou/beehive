@@ -14,6 +14,7 @@ const Home: React.FC<IProps> = ({ navigation }) => {
   return (
     <View>
       <Text>URL:{Config.API_URL}</Text>
+      <Text>React-Native-codePush 14</Text>
     </View>
   );
 };

@@ -12,6 +12,7 @@ import {
 import BottomTabs from './BottomTabs';
 import Detail from '@/pages/Detail/index';
 import IconFont from '@/iconfont/index';
+import HotPushModal from '@/components/codePush/HotPushModal';
 
 export type RootStackParamList = {
   BottomTabs: undefined;
@@ -38,6 +39,7 @@ class Navigator extends React.Component {
   render() {
     return (
       <NavigationContainer>
+        <HotPushModal />
         <RootStack.Navigator
           screenOptions={{
             headerMode: 'float',

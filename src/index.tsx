@@ -1,7 +1,8 @@
 import React from 'react';
 import { StatusBar, View, Text, StyleSheet } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import Navigator from './navigator/index';
+import Navigator from '@/navigator/index';
+import HotPushModal from '@/components/codePush/HotPushModal';
 
 const Index: React.FC<{}> = () => {
   return (

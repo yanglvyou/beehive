@@ -12,6 +12,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import androidx.multidex.MultiDex;
 
+import com.microsoft.codepush.react.CodePush;
+
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost =
@@ -33,6 +35,12 @@ public class MainApplication extends Application implements ReactApplication {
         @Override
         protected String getJSMainModuleName() {
           return "index";
+        }
+
+        // 2. 重写 getJSBundleFile 方法，每次 app 启动的时候让 CodePush 运行时决定从哪里加载 JS bundle
+        @Override
+        protected String getJSBundleFile() {
+            return CodePush.getJSBundleFile();
         }
       };
 
